@@ -269,7 +269,7 @@ export default {
     }
     .bulletin-detail {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         left: 0;
         top: 0;
@@ -282,7 +282,7 @@ export default {
             box-sizing: border-box;
             .main-wrapper {
                 width: 100%;
-                height: 72vh;
+                height: 68vh;
                 background-size: 100% 100%;
                 border-radius: 6px;
                 text-align: center;
