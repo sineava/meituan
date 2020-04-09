@@ -1,19 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
     {
         path: '/',
-        name: 'Home',
-        component: Home
+        redirect: '/goods'
+    },
+    {
+        path: '/goods',
+        name: 'Goods',
+        component: () => import('@/components/goods/Goods')
+    },
+    {
+        path: '/rating',
+        name: 'Rating',
+        component: () => import('@/components/rating/Rating')
+    },
+    {
+        path: '/seller',
+        name: 'Seller',
+        component: () => import('@/components/seller/Seller')
     }
 ]
 
 const router = new VueRouter({
-    routes
+    routes,
+    // 选中样式
+    linkActiveClass: 'active'
 })
 
 export default router
